@@ -1,0 +1,33 @@
+@mixin default($color,$radius,$w:.9375rem,$h:.9375rem) {
+    content: '';
+    display: inline-block;
+    width: $w;
+    height: $h;
+    border: 1px solid $color;
+    border-radius: $radius;
+    margin-right: .625rem;
+    vertical-align: middle;
+}
+
+input[type='radio']{
+    opacity: 0;
+    &+label:before{
+        @include default(#999, 50%);
+    }
+    &:checked{
+        &+label{
+            position: relative;
+            &:before{
+                @include default($btnMainColor, 50%);
+            }
+            &:after{
+                @include default($btnMainColor,50%,$w: .5625rem,$h:.5625rem);
+                background-color: $btnMainColor ;
+                position: absolute;
+                left: 3px;
+                top: 5px;
+            }
+        }
+    }
+}
+

@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>申请售后</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="email=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <!-- <link rel="stylesheet" href="css/mui.min.css"> -->
+    <link rel="stylesheet" type="text/css" media="screen" href="css/sale.css" />
+</head>
+<body>
+
+    <header class="bar-nav">
+        <a class="back-icon"></a>
+        <h1 class="title">售后申请</h1>
+        <a></a>
+    </header>
+    <p class="service-from">本次售后服务由<b class="txt-red-xs">如此生活</b>为您提供</p>
+
+    <dl class="service-type">
+        <dt>服务类型</dt>
+        <dd>
+            <button class="btn-line gray sm btn-return" data-service_type="0">退货</button>
+            <button class="btn-line gray sm btn-exchange" data-service_type="1">换货</button>
+            <button class="btn-line gray sm btn-stockout" data-service_type="2">缺货</button>
+            <button class="btn-line gray sm btn-maintain" data-service_type="3">维修</button>
+        </dd>
+    </dl>
+
+    <div class="service-product">
+        <img src="" alt="">
+        <a href="" class="product-detail">
+            <p>Trablog镜面PC拉杆箱24寸拉杆箱拉杆箱拉杆箱拉杆</p>
+            <p class="txt-gray-xs w-p55 txt-overflow">颜色:黑色;尺寸:24寸</p>
+        </a>
+        <div class="plus-reduce">
+            <span class="reduce-icon"></span>
+            <input type="text" min="1" value="1" class="i-inp">
+            <span class="plus-icon"></span>
+        </div>
+    </div>
+    <div class="applay-reason">
+        <dl class="reason-list">
+            <dt>售后原因</dt>
+            <dd>
+                <button class="btn-cicle gray" data-reason="0">不想要了</button>
+                <button class="btn-cicle gray" data-reason="1">信息有误</button>
+                <button class="btn-cicle gray" data-reason="2">卖家缺货</button>
+                <button class="btn-cicle gray" data-reason="3">货品坏了</button>
+                <button class="btn-cicle gray" data-reason="4">信息有误</button>
+                <button class="btn-cicle gray" data-reason="5">卖家缺货</button>
+                <button class="btn-cicle gray" data-reason="6">其它原因</button>
+            </dd>
+        </dl>
+        
+        <!-- 其他原因时显示 -->
+        <div class="reason-inp">
+            <p class="tit-b">申请原因</p>
+            <!-- <p>我不开心</p> -->
+            <div class="inp-box">
+                <textarea name="" id="" placeholder="您的建议或意见"></textarea>
+                <p>0/20</p>
+            </div>
+        </div>
+
+        <div class="upload-img">
+            <p class="tit-b">上传图片</p>
+            <div class="file-upload">
+                <span class="close"></span>
+                <input type="file" name="" id="">
+                <p class="img-txt">1/3</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="back-type">
+        <p class="tit">退回方式</p>
+        <ul>
+            <li>
+                <input type="radio" name="type" id="type1" data-back_type="0"><label for="type1">快递退回</label>
+            </li>
+            <li class="store-li">
+                <div>
+                    <input type="radio" name="type" id="type2" data-back_type="1" checked><label for="type2">体验店退回</label>
+                </div>
+                <!-- 选择体验店退回显示 -->
+                <a href="storeList.html" class="right-icon-txt store-btn">
+                    <span class="">请选择体验店</span>
+                    <span class="right-icon"></span>
+                </a>
+            </li>
+            <li class="switch-box hide">
+                <b>使用原地址信息</b>
+                <span class="switch-icon active"></span>     
+            </li>
+        </ul>
+    </div>
+
+    <!-- 体验店 换货 -->
+    <div class="exchange-time">
+        <p class="tit">预约换货时间</p>
+        <div class="time-box">
+            <span class="warn-icon">为确保顺利完成换货，请提前预约</span>
+            <!-- 选择时间后 -->
+            <!-- <span class="time-txt">2018.01.23 12:00:00-14:00:56</span> -->
+            <div class="right-icon-txt choose-time" data-target="#exchangeTimeModal">
+                <span>选择时间</span>
+                <span class="right-icon"></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- 退货 -->
+    <ul class="contact-info">
+        <li>
+            <span>联系人：</span>
+            <input type="text" placeholder="请输入联系人姓名" value="张三" class="contact-name" disabled="disabled">
+        </li>
+        <li>
+            <span>联系电话：</span>
+            <input type="text" placeholder="请输入联系电话" value="14545654565" class="contact-tel" disabled="disabled">
+        </li>
+        <li>
+            <b>使用原地址信息</b>
+            <span class="switch-icon active" data-status="open"></span>         
+        </li>
+    </ul>
+
+    <!-- 快递 换货 -->
+
+    <ul class="receiver-address">
+        <li>
+            <span>收货地址</span>
+        </li>
+        <li>
+            <span>联系人：</span>
+            <input type="text" placeholder="请输入联系人姓名" value="张三" class="contact-name" disabled>
+        </li>
+        <li>
+            <span>联系电话：</span>
+            <input type="text" placeholder="请输入联系电话" value="13548797889" class="contact-tel" disabled>
+        </li>
+        <li>
+            <div>
+                <span>省市区：</span>
+                <a class="choose-ct" disabled>（默认地点）/请选择省市区</a>
+            </div>
+            <textarea name="" id="" class="address-detail" placeholder="请输入详细地址" disabled>详细地址详细地址详细地址</textarea>
+        </li>
+        <li>
+            <b>使用原地址信息</b>
+            <span class="switch-icon active"></span>         
+        </li>
+    </ul>        
+
+    <!-- 维修 -->
+
+    <div class="maintain-bar hide">
+        <span>品牌维修点</span>
+        <div class="right-icon-txt store-btn">
+            <a href="brandPoint.html" class="">查看更多</a>
+            <span class="right-icon"></span>
+        </div>
+    </div>
+
+    <div class="footer">
+        <!-- 快递退回提示 -->
+        <p class="notice other txt-left">1、退回地址在审核通过之后会短信通知您的联系电话，或通过售后 详情查看；</p>
+        <p class="notice other txt-left">2、售后服务人员可能会通过电话联系您，请保持手机通畅；</p>
+        <!-- 体验店退回提示 -->
+        <p class="notice default">售后服务人员可能会通过电话联系您，请保持手机畅通</p>
+        <p class="txt-center"><button type="button" class="btn-bg red md"> 提交申请</button></p>
+        <p>查看<a href=""><售后政策></a>，如需人工帮助，请联系 <a href="">在线客服</a> </p>
+    </div>
+
+    <!-- 预约换货时间 弹窗 -->
+    <div class="modal-box top" id="exchangeTimeModal">
+        <div class="black-over"></div>
+        <div class="bt-box">
+            <div class="main-head">
+                <h4 class="tit">预约换货时间</h4>
+                <span class="close-ran"></span>
+            </div>
+            <div class="main-content">
+                <div class="left-tab-box">
+                    <ul class="left-nav">
+                        <li class="active">5月22日[今天]</li>
+                        <li>5月23日[周三]</li>
+                        <li>5月24日[周四]</li>
+                        <li>5月24日[周四]</li>
+                        <li>5月24日[周四]</li>
+                        <li>5月24日[周四]</li>
+                        <li>5月24日[周四]</li>
+                    </ul>
+                    <div class="nav-content">
+                        <button type="button" class="btn-bg gray lg">09:00-12:00</button>
+                        <button type="button" class="btn-bg red lg">14:00-18:00</button>
+                        <button type="button" class="btn-bg gray lg">19:00-21:00</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/common.js"></script>
+    <!-- <script src="js/mui.min.js"></script> -->
+    <script>
+        var applayReason = $('.applay-reason'); //申请原因  
+        var reasonInp = $('.reason-inp');    //申请原因输入  
+        var uploadImg = $('.upload-img');   //上传图片
+        var backType = $('.back-type');     //退回方式
+        var contactInfo = $('.contact-info');   //退回联系方式
+        var receiverAddress = $('.receiver-address'); //换货联系方式
+        var exchangeTime = $('.exchange-time');  //体验店换货
+        var maintainBar = $('.maintain-bar');
+        var serviceProduct = $('.service-product');
+        var footer = $('.footer');
+
+        var serviceType;
+        $('.service-type .btn-line').unbind('click').click(function(){
+            var that = $(this);
+            var sibs = that.siblings('button');
+            activeBtn(that,sibs,'gray','red');
+            
+            serviceType = that.attr('data-service_type');
+            var checkedBackType = $('.back-type input[type="radio"]:checked').attr('data-back_type');
+            var switchBox = $('.back-type .switch-box');
+
+            //退货
+            if(serviceType == 0){
+                applayReason.fadeIn(150);
+                receiverAddress.fadeOut(150);
+                exchangeTime.fadeOut(150);
+                backType.fadeIn(150);
+                contactInfo.fadeIn(150);
+                maintainBar.addClass('hide');
+                serviceProduct.find('.plus-reduce').show();
+
+
+                if(checkedBackType == 0){
+                    switchBox.removeClass('hide');
+                    contactInfo.fadeOut(150);
+
+                }else if(checkedBackType == 1){
+                    contactInfo.fadeIn(150);
+
+                }
+            };
+            //换货
+            if(serviceType == 1){
+                applayReason.fadeIn(150);
+                backType.fadeIn(150);
+                switchBox.addClass('hide');
+                maintainBar.addClass('hide');
+                serviceProduct.find('.plus-reduce').show();
+
+                if(checkedBackType == 0){
+                    receiverAddress.fadeIn(150);
+                    exchangeTime.fadeOut(150);
+                    contactInfo.fadeOut(150);
+
+                }else if(checkedBackType == 1){
+                    exchangeTime.fadeIn(150);
+                    contactInfo.fadeIn(150);
+                    receiverAddress.fadeOut(150);
+                }
+                
+            };
+            //缺货
+            if(serviceType == 2){
+
+                applayReason.fadeIn(150);                
+                backType.fadeOut(150);
+                exchangeTime.fadeOut(150);
+                contactInfo.fadeOut(150);
+                receiverAddress.fadeIn(150);
+                maintainBar.addClass('hide');
+                footer.find('.notice.other').hide();
+                footer.find('.notice.default').show();
+                serviceProduct.find('.plus-reduce').show();
+            };
+            //维修
+            if(serviceType == 3){
+                applayReason.fadeOut(150);
+                backType.fadeOut(150);
+                exchangeTime.fadeOut(150);
+                contactInfo.fadeOut(150);  
+                receiverAddress.fadeOut(150);              
+                maintainBar.removeClass('hide');
+                serviceProduct.find('.plus-reduce').hide();
+            };
+        });
+
+        //退回方式type
+        backType.find('input[type="radio"]').click(function(){
+
+            var backTypeNum = $(this).attr('data-back_type');
+            var prs = getPrs($(this),'.back-type');
+            var storeBtn = prs.find('.store-btn');
+            var switchBox = prs.find('.switch-box');
+            
+            if(backTypeNum == 0){//快递退回
+                storeBtn.fadeOut(150);
+                footer.find('.notice.other').show();
+                footer.find('.notice.default').hide();
+
+                exchangeTime.fadeOut(150);
+
+                if(serviceType == 0) {//退货
+                    switchBox.removeClass('hide');
+                    receiverAddress.fadeOut(150);
+                    contactInfo.fadeOut(150);
+
+                }else if(serviceType == 1){//换货
+                    contactInfo.fadeOut(150);
+                    receiverAddress.fadeIn(150);
+                }
+            };
+            if(backTypeNum == 1){//体验店退回
+                switchBox.addClass('hide');
+                storeBtn.fadeIn(150);
+                footer.find('.notice.default').show();
+                footer.find('.notice.other').hide();
+                contactInfo.fadeIn(150);
+
+                if(serviceType == 0) {//退货
+                    
+       
+                }else if(serviceType == 1){//换货
+                    receiverAddress.fadeOut(150);
+                    exchangeTime.fadeIn(150);
+
+                }
+            }
+        });
+        
+        //switch 操作
+        var contactName = $('.contact-info .contact-name');
+        var contactTel = $('.contact-info .contact-tel');
+        var contactNameVal = contactName.val();
+        var contactTelVal = contactTel.val();
+        
+        var exContactName = $('.receiver-address .contact-name');
+        var exContactTel = $('.receiver-address .contact-tel');
+        var addressTetail = $('.receiver-address .address-detail');
+        var exContactNameVal = exContactName.val();
+        var exContactTelVal = exContactTel.val();
+        var addressTetailVal = addressTetail.val();
+        $('.switch-icon').unbind('click').click(function(){
+            var that = $(this);
+            var prs = that.closest('ul');
+            activeEle(that,'active');
+
+            var status =that.attr('data-status');
+
+            var inps = prs.find('input');
+            var textarea = prs.find('textarea');
+            if(status == 'close'){
+                contactName.val(contactNameVal);
+                contactTel.val(contactTelVal);
+
+                exContactName.val(exContactNameVal);
+                exContactTel.val(exContactTelVal);
+                addressTetail.val(addressTetailVal);
+                inps.attr('disabled',true);
+                textarea.attr('disabled',true);
+                that.attr('data-status','open');
+            }else{
+                that.attr('data-status','close');
+                inps.attr('disabled',false);
+                textarea.attr('disabled',false);
+            }
+        });
+
+
+        $('.reason-list .btn-cicle').unbind('click').click(function(){
+            var that = $(this);
+            var sibs = that.siblings('button');
+            activeBtn(that,sibs,'gray','red');
+            
+            var reasonType = that.attr('data-reason');
+            uploadImg.fadeIn(150);
+            //退货
+            if(reasonType == 0){
+
+            };
+            //换货
+            if(reasonType == 1){
+
+            };
+            //缺货
+            if(reasonType == 2){
+
+            };
+            //其它原因
+            if(reasonType == 6){
+                reasonInp.fadeIn(150);
+            }else{
+                reasonInp.fadeOut(150);
+            };
+        });
+
+        //选择体验店退货时间
+        $('.choose-time').unbind('click').click(function(){
+            fadeInOutEle(getModalId($(this)));
+        });
+        $('.left-tab-box .btn-bg').unbind('click').click(function(){
+            var that = $(this);
+            var sibs = that.siblings('.btn-bg');
+            activeBtn(that,sibs,'gray','red');
+        });
+
+        $('.left-nav li').unbind('click').click(function(){
+            $(this).addClass('active').siblings('li').removeClass('active');
+        });
+        
+        $('.close-ran').unbind('click').click(function(){
+            fadeInOutEle(getPrs($(this),'.modal-box'));
+        });
+
+    </script>
+
+</body>
+</html>
+

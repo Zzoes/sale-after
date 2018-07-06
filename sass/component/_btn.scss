@@ -1,0 +1,64 @@
+@mixin  btn($color,$bgcolor:#fff,$border:$color,$size:.75rem,$w: 4rem,$h: 1.75rem,$radius:.1875rem) {
+    display: inline-block;
+    width:$w;
+    height:$h;
+    font-size:$size;
+    color: $color;
+    text-align: center;
+    text-decoration: none;
+    border-radius:$radius;
+    border:1px solid $border;
+    background-color: $bgcolor;
+    outline: none;
+}
+.btn-line{
+    &.gray{
+        @include btn($btnGrayColor);
+        &.sm{
+            @include btn($btnGrayColor,#fff,$btnGrayColor, .75rem,5.0625rem,1.75rem);
+        }
+        &.md{
+            @include btn($btnGrayColor, #fff,$btnGrayColor, .875rem, 6.875rem,1.875rem);
+        }
+    }
+    &.red{
+        @include btn($btnMainColor);
+        &.sm{
+            @include btn($btnMainColor,#fff,$btnMainColor, .75rem,5.0625rem,1.75rem);
+        }
+        &.md{
+            @include btn($btnMainColor, #fff,$btnMainColor, .875rem, 6.875rem,1.875rem);
+        }
+    }
+}
+a.btn-line{
+    line-height:  1.75rem;
+}
+
+.btn-bg{
+    &.gray{
+        &.md{
+            @include btn(#333333, #EEEEEE,#EEEEEE, .875rem, 6.875rem,1.875rem);
+        }
+        &.lg{
+            @include btn(#333333, #F7F7F7,#F7F7F7, .875rem, 14.375rem,2.75rem);
+        }
+    }
+    &.red{
+        &.md{
+            @include btn(#fff, $btnMainColor,$btnMainColor,1.0625rem, 8.4375rem,2.5rem);
+        }
+        &.lg{
+            @include btn(#fff, $btnMainColor,$btnMainColor,.875rem, 14.375rem,2.75rem);
+        }
+    }
+}
+
+.btn-cicle{
+    &.gray{
+        @include btn(#979797,#fff,#979797, .8125rem, 5rem, 1.875rem,.9375rem);
+    }
+    &.red{
+        @include btn($btnMainColor,#fff,$btnMainColor, .8125rem, 5rem, 1.875rem,.9375rem);
+    }
+}

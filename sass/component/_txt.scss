@@ -1,0 +1,38 @@
+@mixin txt($color,$type:'sm') {
+
+    @if($type == 'xs'){
+        font-size: .75rem;
+    } @else if($type == 's'){
+        font-size: .8125rem;
+    } @else if($type == 'sm'){
+        font-size: .875rem;
+    } @else if($type == 'md'){
+        font-size: .9375rem;
+    } @else if($type == 'lg'){
+        font-size: 1rem;
+    }
+
+    color: $color;
+
+}
+.txt-red-xs{
+    @include txt($btnMainColor,'xs')
+}
+.txt-red-s{
+    @include txt($btnMainColor,'s')
+}
+.txt-red-sm{
+    @include txt($btnMainColor,'sm')
+}
+
+.txt-gray{
+    @include txt($btnGrayColor)
+}
+
+.txt-gray-xs{
+    @include txt($btnGrayColor,'xs')
+}
+.txt-gray-sm{
+    @include txt($btnGrayColor,'sm')
+}
+

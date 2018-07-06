@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>申请售后</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="email=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <!-- <link rel="stylesheet" href="css/mui.min.css"> -->
+    <link rel="stylesheet" type="text/css" media="screen" href="css/sale.css" />
+</head>
+<body>
+
+    <header class="bar-nav">
+        <a class="back-icon"></a>
+        <h1 class="title">售后申请</h1>
+        <a class="mask-icon" data-type="1" data-target="#applyFilter"></a>
+    </header>
+
+    <ul class="tab-menu">
+        <li class="active" data-type="1">
+            <span>售后申请</span>
+        </li>
+        <li data-type="2">
+            <span>申请记录</span>
+        </li>
+    </ul>
+    <div class="tab-content">
+        <ul class="order-list">
+            <li>
+                <dl class="order-store">
+                    <dt>
+                            <!-- http://lorempixel.com/20/20 -->
+                        <img src="" class="store-logo" alt="">
+                        <a href="" class="store-name txt-gray-xs">低声箱包专卖店 </a>
+                    </dt>
+                    <dd class="order-num txt-gray-xs"><a href=""> 订单号：012345678912345</a></dd>
+                </dl>
+                <a href="" class="product-detail">
+                    <span class="fresh-tag"></span><!-- 如果是生鲜 -->
+                    <!-- http://lorempixel.com/65/65 -->
+                    <img src="" class="product-logo" alt="">
+                    <div class="product-info">
+                        <p class="product-name">Trablog镜面PC拉杆箱24寸拉杆箱拉杆箱拉杆箱拉杆箱</p>
+                        <p class="txt-gray-xs">颜色:黑色;尺寸:24寸颜色:黑色;尺寸:24</p>
+                    </div>
+                    <span class="txt-gray-xs">X2</span>
+                </a>
+                <div class="order-manage">
+                    <p class="remark-toast">备注：不要葱花啊不要葱花啊不要葱花啊不要葱花</p><!-- 如果有加工-->
+                    <div class="process"><!-- 如果有加工-->
+                        <p>
+                            <span class="process-iocn"></span>
+                            <a class="txt-red-s">煎烤(十三香味)</a>
+                            <span class="txt-gray-xs txt-overflow w-p55 btn-remark">备注：不要葱花，谢谢不要不要…</span>
+                        </p>
+                        <a href="" class="btn-line red">退加工</a><!-- 跳转售后页面-->
+                    </div>
+
+                    <p class="txt-right"><a href="salesReturn.html" class="btn-line red">申请售后</a><!-- 跳转售后页面--></p>
+                </div>
+            </li>
+        </ul>
+
+        <ul class="sale-record">
+            <li>
+                <dl class="record-bar">
+                    <dt>服务单号:11111199992222</dt>
+                    <dd>
+                        <span>退货</span>
+                        <span class="lock-icon"></span><!-- 等待icon -->
+                        <!-- 完成icon -->
+                        <!-- <span class="ok-icon"></span> -->
+                        <!-- 多种状态 -->
+                        <span class="audit-status">待审核</span>
+                        <!-- <span class="audit-status">已完成</span> -->
+                        <!-- <span class="audit-status">待退回</span> -->
+                    </dd>
+                </dl>
+                <a href="javascript:void(0);" class="product-detail">
+                    <span class="fresh-tag"></span><!-- 如果是生鲜 -->
+                    <!-- http://lorempixel.com/65/65 -->
+
+                    <!-- 无加工单的效果 -->
+                    <img src="" class="product-logo" alt="">
+                    <div class="product-info">
+                        <p class="product-name">Trablog镜面PC拉杆箱24寸拉杆箱拉杆箱拉杆箱拉杆箱</p>
+                        <p class="txt-gray-xs">颜色:黑色;尺寸:24寸颜色:黑色;尺寸:24</p>
+                    </div>
+                    <span class="txt-gray-xs">X2</span>
+
+                    <!-- 有加工单的效果 -->
+                    <!-- <img src="/images/Mask-Copy@2x.png" class="product-logo" alt="">
+                    <div class="product-info pr-0">
+                        <p class="process-info">
+                            <span class="process-tit"><b>清蒸</b>(豉油)</span>
+                            <span class="process-txt txt-overflow">备注: 我可不要什么香菜，我也不要要…</span>
+                        </p>
+                        <div class="product-info-sub">
+                            <img src="" alt="">
+                            <div class="sub-detail">
+                                <p class="product-name">Trablog镜面PC拉杆箱24寸拉杆箱拉杆箱拉杆箱拉杆箱</p>
+                            </div>
+                        </div>
+                    </div>                     -->
+
+                    
+                </a>
+                <div class="order-manage">
+                    <p class="txt-right">
+                        <button type="button" class="btn-line gray btn-cancel" data-target="#cancleApplyModal" data-order_id="0">取消申请</button>
+                        <button type="button" class="btn-line red btn-comment" data-target="#commentModal" data-order_id="0">评价</button>
+                        <button type="button" class="btn-line red btn-detail" data-target="#viewDetailModal" data-order_id="0">查看详情</button>
+                    </p>
+                </div>
+            </li>
+            <li>
+                <dl class="record-bar">
+                    <dt>服务单号:11111199992222</dt>
+                    <dd>
+                        <span>退货</span>
+                        <!-- 等待icon -->
+                        <!-- <span class="lock-icon"></span> -->
+                        <!-- 完成icon -->
+                        <span class="lock-icon ok-icon"></span>
+                        <!-- 多种状态 -->
+                        <!-- <span class="audit-status">待审核</span> -->
+                        <span class="audit-status">已完成</span>
+                        <!-- <span class="audit-status">待退回</span> -->
+                    </dd>
+                </dl>
+                <a href="javascript:void(0);" class="product-detail">
+                    <span class="fresh-tag"></span><!-- 如果是生鲜 -->
+                    <img src="/images/Mask-Copy@2x.png" class="product-logo" alt="">
+                    <div class="product-info pr-0">
+                        <p class="process-info">
+                            <span class="process-tit"><b>清蒸</b>(豉油)</span>
+                            <span class="process-txt txt-overflow">备注: 我可不要什么香菜，我也不要要…</span>
+                        </p>
+                        <div class="product-info-sub">
+                            <img src="" alt="">
+                            <div class="sub-detail">
+                                <p class="product-name">Trablog镜面PC拉杆箱24寸拉杆箱拉杆箱拉杆箱拉杆箱</p>
+                            </div>
+                        </div>
+                    </div>                    
+                </a>
+                <div class="order-manage">
+                    <p class="txt-right">
+                        <button type="button" class="btn-line gray btn-cancel" data-target="#cancleApplyModal" data-order_id="0">取消申请</button>
+                        <button type="button" class="btn-line red btn-comment" data-target="#commentModal" data-order_id="0">评价</button>
+                        <button type="button" class="btn-line red btn-detail" data-target="#viewDetailModal" data-order_id="0">查看详情</button>
+                    </p>
+                </div>
+            </li>
+
+        </ul>
+    </div>
+
+    <!-- 筛选弹窗 applay -->
+    <div class="modal-box" id="applyFilter">
+        <div class="black-over"></div>
+        <div class="right-box">
+            <div class="type-detail">
+                <h4 class="tit">订单类型</h4>
+                <div class="type-list">
+                    <button class="md btn-line red" data-type="0">全部</button>
+                    <button class="md btn-bg gray" data-type="1">商品订单</button>
+                    <button class="md btn-bg gray" data-type="2">生鲜订单</button>
+                    <button class="md btn-bg gray" data-type="3">加工单</button>
+                </div>
+            </div>
+
+            <div class="btn-group">
+                <a class="reset-btn">重置</a>
+                <a class="txt-red-sm confirm-btn" data-order_type='0' data-order_status='0'>确定</a>
+            </div>
+        </div>
+    </div>
+    <!-- 筛选弹窗 record -->
+    <div class="modal-box" id="recordFilter">
+        <div class="black-over"></div>
+        <div class="right-box">
+            <div class="type-detail">
+                <h4 class="tit">订单类型</h4>
+                <div class="type-list">
+                    <button class="md btn-line red" data-type="0">全部</button>
+                    <button class="md btn-bg gray" data-type="1">商品订单</button>
+                    <button class="md btn-bg gray" data-type="2">生鲜订单</button>
+                    <button class="md btn-bg gray" data-type="3">加工单</button>
+                </div>
+
+                <h4 class="tit">售后状态</h4>
+                <div class="type-list">
+                    <button class="md btn-line red" data-status="0">全部</button>
+                    <button class="md btn-bg gray" data-status="1">进行中</button>
+                    <button class="md btn-bg gray" data-status="2">已完成</button>
+                </div>
+            </div>
+
+            <div class="btn-group">
+                <a class="reset-btn">重置</a>
+                <a class="txt-red-sm confirm-btn" data-order_type='0' data-order_status='0'>确定</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 取消订单弹窗 -->
+    <div class="modal-box top" id="cancleApplyModal">
+        <div class="black-over"></div>
+        <div class="mid-box">
+            <div class="main-content">
+                <h4 class="txt-notice">确定取消售后申请？</h4>
+            </div>
+
+            <div class="btn-group">
+                <a class="txt-red-sm confirm-btn">确定</a>
+                <a class="txt-red-sm btn-cancel">取消</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 评价订单弹窗 -->
+    <div class="modal-box top" id="commentModal">
+        <div class="black-over"></div>
+        <div class="mid-box max">
+            <div class="modal-tit-logo"></div>
+            <div class="main-content">
+                <p class="comment-notice">请对本次服务进行评价</p>
+                <p  class="comment-num"><b>换货</b> 服务单号：234567890</p>
+                <p class="comment-name txt-overflow">Trablog镜面PC拉杆箱24寸拉杆箱拉杆箱拉杆箱Trablog镜面PC拉杆箱24寸拉杆箱拉杆箱拉杆箱...</p>
+                <div class="comment-box">
+                    <div class="comment-star">
+                        <span class="star-icon"></span>
+                        <span class="star-icon"></span>
+                        <span class="star-icon"></span>
+                        <span class="star-icon"></span>
+                        <span class="star-icon"></span>
+                    </div>
+                    <div class="inp-box">
+                        <textarea name="" id="" placeholder="您的建议或意见"></textarea>
+                        <p class="">0/20</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="btn-group">
+                <a class="txt-red-sm confirm-btn">确定</a>
+                <a class="txt-red-sm btn-cancel">取消</a>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 评价详情弹窗 -->
+    <div class="modal-box top" id="viewDetailModal">
+        <div class="black-over"></div>
+        <div class="mid-box max">
+            <div class="modal-tit-logo"></div>
+            <div class="main-content">
+                <p class="comment-notice">请对本次服务进行评价</p>
+                <p  class="comment-num"><b>换货</b> 服务单号：234567890</p>
+                <p class="comment-name txt-overflow">Trablog镜面PC拉杆箱24寸拉杆箱拉杆箱拉杆箱Trablog镜面PC拉杆箱24寸拉杆箱拉杆箱拉杆箱...</p>
+                <div class="comment-box">
+                    <div class="comment-star">
+                        <span class="star-icon active"></span>
+                        <span class="star-icon active"></span>
+                        <span class="star-icon active"></span>
+                        <span class="star-icon"></span>
+                        <span class="star-icon"></span>
+                    </div>
+                    <!-- 已评价显示评价内容 未评价显示您没有填写评价内 -->
+                    <p class="comment-info">这次的服务简直是非常的贴心客服响应很/您没有填写评价内</p>
+                </div>
+            </div>
+
+            <div class="btn-group">
+                <a class="txt-red-sm w-100 btn-cancel">确定</a>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/common.js"></script>
+    <!-- <script src="js/mui.min.js"></script> -->
+    <script>
+        var maskFiltrate = $('.mask-icon');//筛选按钮
+        var navBarTxt = $('.bar-nav .title');//tit
+        var tabLi = $('.tab-menu li');//tabli
+        var remark = $('.btn-remark');//备注文本
+        var remarkToast = $('.remark-toast'); //点击备注显示的toast
+
+        var typeDailog = $('.modal-box'); //弹窗   
+        var resetBtn = $('.reset-btn');//重置
+
+        
+        var applyAfterSales = $('.apply-after-sales');//申请售后按钮
+
+        //tab切换
+        tabLi.unbind('click').click(function(){
+            var that = $(this);
+
+            var text = that.find('span').text();
+            navBarTxt.text(text);
+            
+            var type = that.attr('data-type');
+            maskFiltrate.attr('data-type',type);
+            if(type == 1){
+                maskFiltrate.attr('data-target','#applyFilter');
+            }else if(type == 2){
+                maskFiltrate.attr('data-target','#recordFilter');
+            }
+
+            that.addClass('active').siblings('li').removeClass('active');
+            var tabContent = that.parents('.tab-menu').siblings('.tab-content');
+            tabContent.find('ul').eq(that.index()).show().stop().siblings('ul').hide();
+        });
+        
+        //点击筛选
+        maskFiltrate.unbind('click').click(function(){
+            var that = $(this);
+            fadeInOutEle(getModalId(that));
+            activeEle(that,'active');
+        });
+
+        //点击btn-line 激活状态
+        $('.type-list button[class*="btn-"]').unbind('click').click(function(){
+            var that = $(this);
+            var prsModal = that.parents('.modal-box');
+            var sibs =that.siblings('button');
+            activeBtn(that,sibs,'btn-bg gray','btn-line red');
+            
+            var type = that.attr('data-type');
+            var status = that.attr('data-status')
+            prsModal.find('.confirm-btn').attr('data-order_type',type);
+            prsModal.find('.confirm-btn').attr('data-order_status',status);
+            
+        });
+
+        //重置
+        resetBtn.unbind('click').click(function(){
+            var prsModal = getPrs($(this),'.modal-box');
+            var fistBtn = prsModal.find('.type-list button:first-child');
+            var sibs = fistBtn.siblings('button');
+            activeBtn(fistBtn,sibs,'btn-bg gray','btn-line red');
+        });
+        //confirm-btn 确认筛选
+        $('#recordFilter .confirm-btn').unbind('click').click(function(){
+            var prsModal = getPrs($(this),'.modal-box');
+            var type = $(this).attr('data-order_type');
+            var status = $(this).attr('data-order_status');
+            var data = {
+                type:type,
+                status:status
+            };
+            ajaxQuery('post','',data,function(res){
+                console.log('请求成功');
+                console.log(res);
+                
+            });
+            resetBtn.trigger('click');
+            fadeInOutEle(prsModal);
+            activeEle(maskFiltrate,'active');
+        });
+
+        //备注部分交互
+        remark.unbind('click').click(function(){
+           var prs = getPrs($(this),'.order-manage');
+           prs.find('.remark-toast').fadeIn(200);
+        });
+        remarkToast.unbind('click').click(function(){
+          $(this).fadeOut(200);
+        });
+
+        /* 申请记录部分*/
+        // 取消售后
+        var btnCancelApply = $('.order-manage .btn-cancel');
+        var btnCommend = $('.order-manage .btn-comment');
+        var btnDetail = $('.order-manage .btn-detail');
+
+        btnCancelApply.unbind('click').click(function(){
+            var that = $(this);
+            fadeInOutEle(getModalId(that));
+
+            $('#cancleApplyModal .confirm-btn').unbind('click').click(function(){
+                var orderId = that.attr('data-order_id');
+                var prsModal = getPrs($(this),'.modal-box');
+                var data = {
+                    order_id:orderId
+                };
+                ajaxQuery('post','',data,function(res){
+                    console.log('请求成功');
+                    console.log(res);
+                });
+                fadeInOutEle(prsModal);             
+            });
+        });
+        btnCommend.unbind('click').click(function(){
+            $('.star-icon.active').removeClass('active');
+            var that = $(this);
+            fadeInOutEle(getModalId(that));
+
+            $('#commentModal .confirm-btn').unbind('click').click(function(){
+
+                var orderId = that.attr('data-order_id');
+                var prsModal = getPrs($(this),'.modal-box');
+                var starRank = prsModal.find('.star-icon.active').length;
+                var commentTxt = prsModal.find('.inp-box textarea').val();
+                var data = {
+                    order_id:orderId,
+                    star_rank:starRank,
+                    comment:commentTxt
+                };
+                ajaxQuery('post','',data,function(res){
+                    console.log('请求成功');
+                    console.log(res);
+                });
+                that.addClass('gray').removeClass('red');
+                that.text('已评价');
+                that.attr('disabled',true);
+                fadeInOutEle(prsModal);             
+            });
+        });
+        btnDetail.unbind('click').click(function(){
+            fadeInOutEle(getModalId($(this)));
+        });
+        
+        /*评价星级交互*/
+        var starEles = $('.comment-star .star-icon');
+        starEles.unbind('click').click(function(){
+            $(this).addClass('active');
+            $(this).prevAll().addClass('active');
+            $(this).nextAll().removeClass('active');
+        });
+
+   
+    </script>
+
+</body>
+</html>
+

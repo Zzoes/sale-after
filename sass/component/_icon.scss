@@ -1,0 +1,175 @@
+@mixin IconContent($img,$w:1.375rem,$h:1.375rem){
+    content: '';
+    display: inline-block;
+    background: url(#{$imgSrc}#{$img}) no-repeat center;   
+    width: $w;
+    height: $h;
+    background-size: contain;
+    vertical-align: middle;
+}
+
+.mask-icon{
+    &:before{
+        @include IconContent('Mask@2x.png',2rem,2rem);
+    }
+    &.active{
+        &:before{
+            @include IconContent('Mask@2x-red.png',2rem,2rem);
+        }
+    }
+}
+
+.process-iocn{
+    &:before{
+        @include IconContent('Group8@2x.png',.9375rem,.875rem);
+        border: 1px dashed #999;
+    }  
+}
+.back-icon{
+    &:before{
+        @include IconContent('icon_back@2x.png');
+        margin-left: 5px;
+    }  
+    
+}
+@mixin cartIcon {
+    content: '';
+    display: inline-block;
+    width: .625rem;
+    height: .625rem;
+    border-top: 1px solid #D8D8D8;
+    border-right: 1px solid #D8D8D8;
+    margin-left: 5px; 
+}
+
+.right-icon{
+    &:before{
+        @include cartIcon;
+        transform: rotate(45deg);
+    }  
+}
+.down-icon{
+    &:before{
+        @include cartIcon;
+        transform: rotate(135deg);
+        vertical-align: 1px;   
+    }
+    &.top{
+        &:before{
+            @include cartIcon;
+            transform: rotate(-45deg);
+            vertical-align: -2px; 
+        }        
+    }
+}
+
+.switch-icon{
+    &:before{
+        @include IconContent('switch-close.png',2.3rem,1.5625rem);
+    }
+    &.active{
+        &:before{
+            @include IconContent('switch-open.png',2.3rem, 1.5625rem);
+        }
+    }
+}
+
+.lock-icon{
+    &:before{
+        @include IconContent('lock.png',1.0625rem,1.0625rem);
+        margin-left: .125rem;
+        margin-right: .125rem;
+        vertical-align: text-top;
+    }
+    &.ok-icon{
+        &:before{
+            @include IconContent('ok.png',1.0625rem,1.0625rem);
+        }  
+    }
+}
+
+.star-icon{
+    &:before{
+        @include IconContent('Star@2x.png',1.5rem,1.4375rem);
+        margin-right: .625rem;
+    }
+    &.active{
+        &:before{
+            @include IconContent('Star@2x-red.png',1.5rem,1.4375rem);
+            margin-right: .625rem;
+        }
+    }  
+}
+
+.reduce-icon{
+    // display: inline-block;
+    // height: 1.4375rem;
+    &:before{
+        @include IconContent('reduce@2x.png',1.5rem,1.4375rem);
+    }
+}
+
+.plus-icon{
+    // display: inline-block;
+    // height: 1.4375rem;
+    &:before{
+        @include IconContent('plus@2x.png',1.5rem,1.4375rem);
+    }
+}
+.warn-icon{
+    &:before{
+        @include IconContent('warn.png',.75rem,.75rem);
+        padding-right: .25rem;
+        vertical-align: -2px;
+    }
+}
+.map-icon{
+    &:before{
+        @include IconContent('warn.png',.75rem,.75rem);
+    } 
+}
+
+.close{
+    &:before{
+        @include IconContent('close.png', .9375rem,.9375rem);
+    }
+}
+.close-ran{
+    &:before{
+        @include IconContent('close-ran.png', 1.375rem,1.375rem);
+        border:1px dashed #666;
+    } 
+}
+
+.fresh-tag{
+    &:before{
+        @include IconContent('fresh-tag.png',2.1875rem,2.1875rem);
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 10;
+    }  
+}
+.modal-tit-logo{
+    text-align: center;
+    &:before{
+        @include IconContent('mascot@2x.png', 14.375rem,6.5625rem);
+        margin: -3.1875rem auto 0 auto;
+    }  
+}
+
+.remark-toast{
+    display: none;
+    position: absolute;
+    top: -2rem;
+    box-sizing: border-box;
+    // display: inline-block;
+    color: #fff;
+    font-size: .875rem;
+    width: 22.1875rem;
+    padding: .5rem .6875rem;
+    margin: 0 auto;
+    background:rgba(0,0,0,0.5);
+    border-radius: .25rem;
+    letter-spacing: .03125rem;
+}
