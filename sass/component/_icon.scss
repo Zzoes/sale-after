@@ -88,6 +88,17 @@
     }
 }
 
+.yes-icon{
+    &:before{
+        @include IconContent('no@2x.png',22px,22px);
+    }  
+    &.active{
+        &:before{
+            @include IconContent('yes@2x.png',22px,22px);
+        }
+    }
+}
+
 .star-icon{
     &:before{
         @include IconContent('Star@2x.png',1.5rem,1.4375rem);
@@ -125,7 +136,7 @@
 }
 .map-icon{
     &:before{
-        @include IconContent('warn.png',.75rem,.75rem);
+        @include IconContent('map@2x.png', 1.6875rem,1.6875rem);
     } 
 }
 
@@ -166,10 +177,17 @@
     // display: inline-block;
     color: #fff;
     font-size: .875rem;
-    width: 22.1875rem;
+    width: 95%;
     padding: .5rem .6875rem;
     margin: 0 auto;
     background:rgba(0,0,0,0.5);
     border-radius: .25rem;
     letter-spacing: .03125rem;
+}
+
+@media (max-width: 320px){  
+    .remark-toast{
+      width: 94%;
+      font-size: 12px;
+    }
 }

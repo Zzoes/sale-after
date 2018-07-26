@@ -2,6 +2,7 @@
     display: inline-block;
     width:$w;
     height:$h;
+    line-height: $h;
     font-size:$size;
     color: $color;
     text-align: center;
@@ -31,9 +32,9 @@
         }
     }
 }
-a.btn-line{
-    line-height:  1.75rem;
-}
+// a.btn-line{
+//     line-height:  1.75rem;
+// }
 
 .btn-bg{
     &.gray{
@@ -60,5 +61,36 @@ a.btn-line{
     }
     &.red{
         @include btn($btnMainColor,#fff,$btnMainColor, .8125rem, 5rem, 1.875rem,.9375rem);
+    }
+}
+
+button[class*='btn-']{
+    line-height: inherit !important;
+}
+
+@media (max-width: 320px){  
+    .btn-line{
+        &.red{
+            width: 58px;
+            height: 26px;
+            line-height: 26px;
+            &.sm{
+                width: 67.5px;
+            }
+        }
+        &.gray{
+            width: 58px;
+            height: 26px;
+            line-height: 26px; 
+            &.sm{
+                width: 67.5px;
+            }
+        }
+    }
+    .btn-cicle{
+        &.gray,&.red{
+            font-size: 12px;
+            width: 67.5px;
+        }
     }
 }
